@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satoru Gojo Powers</title>
+  <link rel="stylesheet" href="css/powerseyes.css">
+</head>
+<body>
+  <div class="header">
+    <img src="images/kp-logo-placeholder.png" alt="Website Logo that says Satoru Gojo" class="logo">
+    <img src="images/[CITYPNG.COM]White Search Icon Button PNG IMG - 700x700.png" alt="Search Button" class="search-button">
+</div>
+<div class="square"></div>
+<div class="text-box">
+  <h2>Satoru Gojo</h2>
+  <h3>"What Kind of Idiot Picks on the Strong?" -Satoru Gojo</h3>
+  
+  <div class="backstory-slideshow-container">
+    
+    <div class="backstory-slide active">
+      <p>Limitless (無下限, Mugen Kagen), is Satoru Gojo's signature cursed technique, allowing him to manipulate space at an atomic level. It provides him with a range of abilities centered around the concept of infinity. The core function of Limitless is to create an infinite barrier, which makes it impossible for any attack to physically touch him unless he permits it. Overall, Limitless grants Gojo unparalleled defensive and offensive capabilities, making him one of the most formidable characters in Jujutsu Kaisen.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Infinity (無限, Mugen): Creates an infinite barrier that slows down anything approaching him, making him untouchable.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Cursed Technique Lapse: Blue (術式順転「蒼」, Jutsushiki Junten: Ao): Generates a force of attraction, pulling objects toward a single point.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Cursed Technique Reversal: Red (術式反転「赫」, Jutsushiki Hanten: Aka): Creates a repulsive force that pushes everything away.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Hollow Purple (虚式「茈」, Kyoshiki: Murasaki): Combines Blue (attraction) and Red (repulsion) to erase matter from existence.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Six Eyes (六眼, Rokugan): Enhances Gojo's perception and cursed energy control, allowing him to use energy with near-perfect efficiency and perceive cursed energy in immense detail.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Domain Expansion: Unlimited Void (無量空処, Muryōkūsho): Traps opponents in a space where they are bombarded with infinite information, immobilizing them while Gojo can attack freely.</p>
+    </div>
+    
+    <!-- Arrow Buttons -->
+    <button class="backstory-prev" onclick="changeBackstorySlide(-1)">&#10094;</button>
+    <button class="backstory-next" onclick="changeBackstorySlide(1)">&#10095;</button>
+  </div>
+</div>
+<div class="power-page">
+  <a href="powers.html">Limitless/ Infinity</a>
+  <a href="powersred.html">Reversal: Red</a>
+  <a href="powersblue.html">Lapse: Blue</a>
+  <a href="powerspurple.html">Hollow Purple</a>
+  <a href="powerseyes.html">Six Eyes</a>
+  <a href="powersdomain.html">Domain Expansion</a>
+</div>
+<nav class="navbar">
+  <ul>
+    <li>
+      <a rel="hover" class="button hover"href="index.html">Home</a>
+    </li>
+      <li>
+        <a rel="hover" class="button hover"href="backstory.html">Backstory</a>
+      </li>
+      <li>
+        <a rel="hover" class="button hover"href="powers.html">Powers</a>
+      </li>
+      <li>
+        <a rel="hover" class="button hover"href="appearance.html">Appearance</a>
+      </li>
+       
+  </ul>
+</nav>
+<script>
+  // JavaScript for Backstory Slideshow
+  let currentBackstorySlide = 5;
+  const backstorySlides = document.querySelectorAll('.backstory-slide');
+
+  function showBackstorySlide(index) {
+    backstorySlides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      slide.style.opacity = 0;
+    });
+
+    // Make sure the index loops around if it's out of bounds
+    currentBackstorySlide = (index + backstorySlides.length) % backstorySlides.length;
+    backstorySlides[currentBackstorySlide].classList.add('active');
+    backstorySlides[currentBackstorySlide].style.opacity = 1;
+  }
+
+  function changeBackstorySlide(direction) {
+    showBackstorySlide(currentBackstorySlide + direction);
+  }
+
+  // Initially show the first slide
+  showBackstorySlide(currentBackstorySlide);
+</script>
+</body>
+</html>

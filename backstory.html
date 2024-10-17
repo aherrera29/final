@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satoru Gojo Backstory</title>
+  <link rel="stylesheet" href="css/backstory.css">
+</head>
+<body>
+  <div class="header">
+    <img src="images/kp-logo-placeholder.png" alt="Website Logo that says Satoru Gojo" class="logo">
+    <img src="images/[CITYPNG.COM]White Search Icon Button PNG IMG - 700x700.png" alt="Search Button" class="search-button">
+<div class="square"></div>
+<div class="text-box">
+  <h2>Satoru Gojo</h2>
+  <h3>"Don't Worry, I'm The Strongest."-Satoru Gojo</h3>
+  
+  <div class="backstory-slideshow-container">
+   
+    <div class="backstory-slide active">
+      <p>
+        Satoru Gojo was born into the esteemed Gojo family, one of the most powerful and influential clans in the jujutsu sorcery world. From a young age, Gojo was recognized as a prodigy, burdened by the weight of his family’s legacy. His early years were marked by isolation, as his overwhelming talent and status distanced him from others. This sense of separation became a driving force behind his personality, shaping him into someone who outwardly exudes confidence and aloofness but struggles with deeper emotional connections.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Gojo's pivotal moment in his past came during his time as a student at Tokyo Jujutsu High, where he experienced a significant loss. While on a mission with his close friend, Suguru Geto, their bond began to fracture due to differing ideologies. This divergence in their beliefs—Gojo striving to protect the weak and Geto seeking to eliminate them—eventually led to Geto's betrayal and descent into villainy. This personal loss deeply affected Gojo, solidifying his resolve to change the jujutsu society. It was during this time that Gojo realized the corruption and rigid hierarchy within the system, which he believed perpetuated injustice.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>In the present, Gojo is both feared and revered as the strongest sorcerer. He is a teacher at Tokyo Jujutsu High, where he dedicates himself to training the next generation of sorcerers. Despite his carefree and often arrogant demeanor, Gojo takes his role as a mentor seriously. His mission goes beyond mere teaching; he aims to break down the old, corrupt structures of the jujutsu world. By nurturing promising students like Yuji Itadori, Megumi Fushiguro, and Nobara Kugisaki, Gojo seeks to build a new era of sorcerers who can challenge the status quo.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Gojo's past experiences, particularly the loss of his friendship with Geto, continue to shape his present actions. He harbors a sense of responsibility, not just as a powerful sorcerer but as someone who carries the burden of changing a broken system. While he remains confident in his abilities, there is an underlying sense of loneliness in his journey, as his strength sets him apart from others, and his mission requires him to carry much of the burden alone.</p>
+    </div>
+    
+    <!-- Arrow Buttons -->
+    <button class="backstory-prev" onclick="changeBackstorySlide(-1)">&#10094;</button>
+    <button class="backstory-next" onclick="changeBackstorySlide(1)">&#10095;</button>
+  </div>
+</div>
+<nav class="navbar">
+  <ul>
+    <li>
+      <a rel="hover" class="button hover"href="index.html">Home</a>
+    </li>
+      <li>
+        <a rel="hover" class="button hover"href="backstory.html">Backstory</a>
+      </li>
+      <li>
+        <a rel="hover" class="button hover"href="powers.html">Powers</a>
+      </li>
+      <li>
+        <a rel="hover" class="button hover"href="appearance.html">Appearance</a>
+      </li>
+       
+  </ul>
+</nav>
+<script>
+  // JavaScript for Backstory Slideshow
+  let currentBackstorySlide = 0;
+  const backstorySlides = document.querySelectorAll('.backstory-slide');
+
+  function showBackstorySlide(index) {
+    backstorySlides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      slide.style.opacity = 0;
+    });
+
+    // Make sure the index loops around if it's out of bounds
+    currentBackstorySlide = (index + backstorySlides.length) % backstorySlides.length;
+    backstorySlides[currentBackstorySlide].classList.add('active');
+    backstorySlides[currentBackstorySlide].style.opacity = 1;
+  }
+
+  function changeBackstorySlide(direction) {
+    showBackstorySlide(currentBackstorySlide + direction);
+  }
+
+  // Initially show the first slide
+  showBackstorySlide(currentBackstorySlide);
+</script>
+</body>
+</html>

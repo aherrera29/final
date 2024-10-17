@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satoru Gojo Powers</title>
+  <link rel="stylesheet" href="css/whiteblindfold.css">
+</head>
+<body>
+  <div class="header">
+    <img src="images/kp-logo-placeholder.png" alt="Website Logo that says Satoru Gojo" class="logo">
+    <img src="images/[CITYPNG.COM]White Search Icon Button PNG IMG - 700x700.png" alt="Search Button" class="search-button">
+</div>
+<div>
+  <img src="images/whiteblindfold.png" alt="Satoru Gojo wearing a white blindfold" class="outfit">
+</div>
+<div class="square"></div>
+<div class="text-box">
+  <h2>Satoru Gojo</h2>
+  <h3>"Dying To Win & Risking Death To Win Are Completely Different..." -Satoru Gojo</h3>
+  <div class="backstory-slideshow-container">
+    <div class="backstory-slide active">
+      <p>Satoru Gojo wears a dark blue or indigo high-collar jacket paired with matching pants, creating a sleek, fitted appearance that exudes both formality and tactical readiness. His black blindfold, a signature part of his look when he uses his immense powers, adds to his mysterious aura. The outfit, completed with black shoes, is polished yet functional, perfectly complementing the glowing, dramatic background and his powerful stance, symbolizing his enigmatic strength as a Jujutsu sorcerer.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Satoru Gojo is dressed in a dark blue or indigo high-collar jacket with matching pants, giving him a sleek, fitted look that combines formality with a tactical edge. On this occasion, he is wearing a white blindfold instead of his usual black one, adding a striking contrast to his outfit while still maintaining the air of mystery surrounding his powers. Paired with polished black shoes, his ensemble is both functional and refined, complementing the glowing, dramatic setting and emphasizing his commanding presence as a powerful and enigmatic Jujutsu sorcerer.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>A younger Gojo is dressed in a traditional black "gakuran" school uniform. The stiff-collared uniform, with brass buttons down the front, gives him a more classic look. He wears black sunglasses, keeping his signature cool and confident expression intact, even as a teenager, reflecting his unwavering self-assuredness and laid-back attitude.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Gojo appears in a more casual outfit, wearing a light blue button-up shirt with the top slightly unbuttoned, giving him a relaxed and effortless vibe. He is also wearing black jeans. His iconic white hair is highlighted, and instead of his usual blindfold, he dons stylish blue-tinted sunglasses. The sparkly, whimsical background enhances his confident and carefree demeanor, emphasizing his charm and playful personality in a less formal setting.</p>
+    </div>
+    <div class="backstory-slide">
+      <p>Gojo starts wearing a look similar to Toji's in the final stages of the Culling Game arc. His change in wardrobe is first seen in Chapter 221, when Gojo prepares for his ultimate battle with Sukuna. The outfit is symbolic, connecting him to Megumi's father, Toji Fushiguro, and reflecting the deep bond between Gojo and Megumi as Gojo tries to save him from Sukuna’s control. This new look emphasizes Gojo’s role as a father figure during the emotional lead-up to the fight</p>
+    </div>
+    
+    
+    <button class="backstory-prev" onclick="changeBackstorySlide(-1)">&#10094;</button>
+    <button class="backstory-next" onclick="changeBackstorySlide(1)">&#10095;</button>
+  </div>
+</div>
+<div class="power-page">
+  <a href="appearance.html">Black Blindfold</a>
+  <a href="whiteblindfold.html">White Blindfold</a>
+  <a href="teengojo.html">Teen Gojo</a>
+  <a href="sparklygojo.html">Sparkly Gojo</a>
+  <a href="tojigojo.html">Toji Gojo</a>
+</div>
+<nav class="navbar">
+  <ul>
+    <li>
+      <a rel="hover" class="button hover"href="index.html">Home</a>
+    </li>
+      <li>
+        <a rel="hover" class="button hover"href="backstory.html">Backstory</a>
+      </li>
+      <li>
+        <a rel="hover" class="button hover"href="powers.html">Powers</a>
+      </li>
+      <li>
+        <a rel="hover" class="button hover"href="appearance.html">Appearance</a>
+      </li>
+       
+  </ul>
+</nav>
+<script>
+  // JavaScript for Backstory Slideshow
+  let currentBackstorySlide = 1;
+  const backstorySlides = document.querySelectorAll('.backstory-slide');
+
+  function showBackstorySlide(index) {
+    backstorySlides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      slide.style.opacity = 0;
+    });
+
+    // Make sure the index loops around if it's out of bounds
+    currentBackstorySlide = (index + backstorySlides.length) % backstorySlides.length;
+    backstorySlides[currentBackstorySlide].classList.add('active');
+    backstorySlides[currentBackstorySlide].style.opacity = 1;
+  }
+
+  function changeBackstorySlide(direction) {
+    showBackstorySlide(currentBackstorySlide + direction);
+  }
+
+  // Initially show the first slide
+  showBackstorySlide(currentBackstorySlide);
+</script>
+</body>
+</html>
